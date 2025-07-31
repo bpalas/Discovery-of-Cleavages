@@ -94,7 +94,6 @@ def run_analysis():
     df_comparativo = pd.DataFrame([metricas_pre, metricas_post])
     print("\n--- RESULTADOS COMPARATIVOS ---")
     print(df_comparativo)
-    # df_comparativo.to_csv('../results/comparacion_plebiscito.csv') # Guardar resultados
 
 
 if __name__ == '__main__':

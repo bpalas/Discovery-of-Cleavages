@@ -39,11 +39,6 @@ def run_comparative_analysis():
             "eigen_solver": "scipy"
         },
         {
-            "name": "Local Search (beta=0.1)",
-            "algorithm_type": "local_search_paper_k2",
-            "k": k, "ls_beta": 0.1, "ls_max_iter": 20
-        },
-        {
             "name": "Local Search (beta=0.01)",
             "algorithm_type": "local_search_paper_k2",
             "k": k, "ls_beta": 0.01, "ls_max_iter": 20
@@ -52,10 +47,6 @@ def run_comparative_analysis():
             "name": "Local Search (beta=0.005)",
             "algorithm_type": "local_search_paper_k2",
             "k": k, "ls_beta": 0.005, "ls_max_iter": 20
-        },
-        {
-            "name": "SCG (min_angle)", "algorithm_type": "scg",
-            "K": 2, "rounding_strategy": "min_angle"
         },
         {
             "name": "SCG (max_obj)", "algorithm_type": "scg",
