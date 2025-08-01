@@ -17,7 +17,8 @@ from .visualization import clivaje_recta
 def ejecutar_analisis_polarizacion(
     df_input: pd.DataFrame,
     config: dict,
-    default_cols: dict
+    default_cols: dict,
+    calculate_intra_cluster_cc: bool = False
 ):
     print(f"--- Iniciando Análisis: {config.get('name', 'Sin Nombre')} ---")
 
@@ -99,7 +100,9 @@ def ejecutar_analisis_polarizacion(
         x_result=cluster_assignments,
         A_s=A_s,
         k=k,
-        alpha=alpha
+        alpha=alpha,
+        calculate_intra_cluster_cc=calculate_intra_cluster_cc # <--- AÑADE ESTO
+
     )
 
     node_details = [{"NODE_NAME": idx_to_node[i], "CLUSTER_ASSIGNMENT": cluster_assignments[i]} for i in range(n_nodes)]
