@@ -162,13 +162,11 @@ def run_comparative_analysis():
     df_resultados_paper = pd.DataFrame(resultados_paper)
     df_resultados_tfidf = pd.DataFrame(resultados_tfidf)
 
-    # ... (código para mostrar las tablas 1 y 2 sin cambios) ...
 
     # --- Guardar resultados en CSV ---
     try:
         results_dir = os.path.join(project_root_path, 'results')
         os.makedirs(results_dir, exist_ok=True)
-        # ... (código para guardar metricas_core y metricas_paper sin cambios) ...
         
         # --- MODIFICADO: Guardar el nuevo CSV con los resultados de TF-IDF ---
         if not df_resultados_tfidf.empty:

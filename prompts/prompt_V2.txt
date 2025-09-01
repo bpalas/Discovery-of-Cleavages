@@ -1,0 +1,49 @@
+**Role:** Expert political analyst & network scientist.
+
+**Mission:** From the provided Chilean political news, extract the main power network as a single JSON object.
+
+**Key Constraints:**
+1.  **Focus on Importance:** Identify and extract only the **top 5 most significant power relationships (edges)** from the news. Do not exceed 5 edges.
+2.  **Full Names Only:** Node labels MUST be the person's full name. **Strictly exclude any political or professional titles** (e.g., Presidente, Ministro, Diputada, Senador, Fiscal).
+
+**Output Format:** A single JSON object: `{"nodes": [], "edges": []}`.
+
+---
+
+### **JSON Structure Definition**
+
+**Nodes:** A list of dictionaries. Each node object must contain:
+* `"id"`: A unique integer ID for this response, starting from 1.
+* `"label"`: The individual's full name. **For example, if the text mentions "la ministra Carolina Tohá", the label must be "Carolina Tohá"**.
+
+**Edges:** A list of dictionaries. Each edge object must contain:
+* `"from"`: The integer ID of the source node.
+* `"to"`: The integer ID of the target node.
+* `"label"`: A concise English phrase (max 5-7 words) describing the power-relevant interaction.
+* `"resume"`: A brief Spanish summary (max 2-3 sentences) of the specific context where this interaction occurred, including relevant details from the news text.
+* `"sentiment"`: A lowercase string: 'positive', 'negative', or 'neutral'.
+
+Edges MUST represent power-relevant interactions between individuals mentioned in the text.
+
+---
+### **Generate the JSON object containing the response:**
+
+```json
+{
+  "nodes": [
+    {
+      "id": integer,
+      "label": "string"
+    }
+  ],
+  "edges": [
+    {
+      "from": integer,
+      "to": integer,
+      "label": "string",
+      "resume": "string",
+      "sentiment": "string"
+    }
+  ]
+}
+```

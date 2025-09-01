@@ -1,0 +1,32 @@
+
+    REPORTE DE ANÁLISIS DE FRONTERA POLÍTICA
+    ========================================
+    
+    ESTADÍSTICAS GENERALES:
+    - Total de actores: 12080
+    - Actores polarizados: 2676
+    - Actores neutrales: 9404
+    
+    MÉTRICAS DE FRONTERA:
+    - Sesgo de Equilibrio promedio: 0.232
+    - Índice de Frontera promedio: 0.126
+    - Actores fronterizos (|S_eq| < 0.3): 304
+    
+    TOP 5 ACTORES FRONTERIZOS:
+                        s_eq  indice_frontera  d_anom  p_anom
+node                                                     
+Johannes Kaiser    0.014            2.288       6   0.086
+Jaime Mulet       -0.046            2.047      12   0.231
+Isabel Allende    -0.014            1.908       6   0.167
+Patricio Cooper    0.015            1.833       4   0.121
+José Antonio Kast  0.250            1.801       4   0.061
+    
+    TOP 5 ACTORES MÁS POLARIZADOS:
+                           s_eq  eigenvector_centrality
+node                                               
+BBVA Research          -1.0                   0.005
+Chris Weston           -1.0                  -0.000
+Silvia Lospennato      -1.0                  -0.001
+Ortiz Mena              1.0                  -0.000
+Ricardo Ruiz Escalona   1.0                  -0.000
+    
